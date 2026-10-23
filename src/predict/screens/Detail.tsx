@@ -70,6 +70,9 @@ export function Detail({ id }: { id: string }) {
         <h2 className="flex items-center gap-2 text-[20px] font-extrabold">
           <BarChart3 className="h-5 w-5" /> Fordeling af gæt
         </h2>
+        {status === 'open' && !mine ? (
+          <p className="mt-3 rounded-[12px] bg-dr-beige p-4 text-[15px]">Svar først – så ser du, hvad andre har gættet.</p>
+        ) : (
         <ul className="mt-3 space-y-3">
           {p.options.map((o) => (
             <li key={o.id}>
@@ -84,7 +87,8 @@ export function Detail({ id }: { id: string }) {
             </li>
           ))}
         </ul>
-        {friends && friends.count > 0 && (
+        )}
+        {friends && friends.count > 0 && mine && (
           <div className="mt-4 rounded-[12px] bg-dr-beige p-3 text-[14px]">
             <p className="font-bold">Dine venner ({friends.count})</p>
             <ul className="mt-1 space-y-1">

@@ -6,3 +6,6 @@ dist
 DR APP design/
 VM spil inspo/
 .playwright-mcp/
+
+# Stray screenshots from browser testing
+/*.png

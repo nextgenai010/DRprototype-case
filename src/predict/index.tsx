@@ -4,7 +4,7 @@
 
 import { useEffect, useRef } from 'react'
 import { ChevronRight, Trophy } from 'lucide-react'
-import { PredictProvider, usePredict, type HostBridge, type HostTab } from './store'
+import { PERSIST_ACROSS_REFRESH, PredictProvider, usePredict, type HostBridge, type HostTab } from './store'
 import { PredictOverlays } from './components/Overlays'
 import { OptionList } from './components/Guess'
 import { Countdown } from './components/PredictionCard'
@@ -18,7 +18,7 @@ import { Danmark } from './screens/Danmark'
 import { Profile } from './screens/Profile'
 import { CategoryTag } from './ui'
 
-export { PredictProvider, PredictOverlays, type HostBridge, type HostTab }
+export { PERSIST_ACROSS_REFRESH, PredictProvider, PredictOverlays, type HostBridge, type HostTab }
 
 /** Hooks the shell may use (daily pop-up trigger, demo panel, deep links). */
 export function usePredictHost() {

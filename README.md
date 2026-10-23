@@ -22,8 +22,10 @@ På desktop vises appen i en telefonramme (390×844). På mobil fylder den hele 
 4. **Se flere forudsigelser** → Spil: Mine gæt, Sket siden sidst, Mine ligaer, Hele Danmark gætter.
 5. Åbn en forudsigelse → relateret indhold fra DRTV/DR Lyd, "Ret mit gæt", boost, "Udfordr en ven".
 6. **Studiegruppen** → bevægelsespile (▲2) → **Tilføj reaktion**.
-7. Langt tryk på DR-logoet (eller Menu → Demo) → **Spring til næste dag** → Forside: "Sket siden sidst – Du fik 150 point · Du rykkede 2 pladser op i Studiegruppen".
+7. Langt tryk på DR-logoet (eller Menu → Demo) → **Spring til næste dag** → Forside: "Sket siden sidst – Du fik 100 point · Du rykkede 2 pladser op i Studiegruppen" (gætter du også på Superliga-topkampen, kommer der flere point oveni).
 8. Spil → avatar (Profil) → skift interesser → feedet og dagens forudsigelse skifter.
+
+**Hver gang siden genindlæses (F5), starter demoen forfra**: ikke logget ind, intet besvaret. Vil du hellere beholde tilstanden mellem genindlæsninger, så sæt `PERSIST_ACROSS_REFRESH = true` i `src/predict/store.tsx`.
 
 Demo-panel: Vis dagens pop-up igen · Spring til næste dag · Afgør alle åbne forudsigelser · Nulstil demo.
 Ligakoder: `DR2026` (Studiegruppen – demo-kontoen er allerede med), `HAND26` (Håndboldholdet).
@@ -41,7 +43,7 @@ src/
     config/events.json  alle 18 forudsigelser som data – nye events uden kodeændringer
     config/leagues.ts   demo-ligaer · config/meta.ts  kategorier, interesser, regioner
     logic/           scoring, personalisering, aggregater, selectors, tid
-    store.tsx        state + localStorage (`drpredict:state:v1`), demo-ur, navigation, overlays
+    store.tsx        state + localStorage (`drpredict:state:v2`), demo-ur, navigation, overlays
 ```
 
 Shell'en importerer kun fra `src/predict/index.tsx`, ligesom DR ville montere spillet som webview/mikrofrontend flere steder i appen.

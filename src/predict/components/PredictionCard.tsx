@@ -5,7 +5,8 @@ import { closesAt, guessOptionId, isBoosted, participantsOf, resultOf, scoreFor,
 import { formatCountdown, formatShortDateTime, fmtInt } from '../logic/time'
 import { formatGuess } from '../config/meta'
 import { Illustration } from '../../shared/Illustration'
-import { CategoryTag, StatusPill, PctBar } from '../ui'
+import { CategoryTag, StatusPill, PctBar, Btn } from '../ui'
+import { OptionList } from './Guess'
 import { DrEye } from '../../shared/brand'
 
 export function Countdown({ p, className = '' }: { p: Prediction; className?: string }) {
@@ -51,12 +52,14 @@ export function RelatedCard({ link }: { link: ContentLink }) {
 }
 
 export function PredictionCard({ p, reason }: { p: Prediction; reason?: string | null }) {
-  const { state, now, push } = usePredict()
+  const { state, now, push, requireLogin, guess } = usePredict()
   const status = statusOf(state, p, now)
   const g = state.guesses[p.id]
   const mine = guessOptionId(p, g?.value)
   const result = resultOf(state, p)
   const sc = scoreFor(state, p)
+  // Unanswered open questions get answer buttons; the distribution is revealed after answering.
+  const canAnswer = status === 'open' && !g
 
   return (
     <article className="overflow-hidden rounded-[14px] bg-white ring-1 ring-neutral-200">
@@ -84,6 +87,18 @@ export function PredictionCard({ p, reason }: { p: Prediction; reason?: string |
       </button>
 
       <div className="px-4 pb-3">
+        {canAnswer ? (
+          p.type === 'score' ? (
+            <Btn className="w-full" onClick={() => push({ name: 'detail', id: p.id })}>
+              Gæt resultatet
+            </Btn>
+          ) : (
+            <>
+              <OptionList p={p} compact reveal={false} onPick={(id) => requireLogin(() => guess(p.id, id), 'for at gemme dit gæt')} />
+              <p className="mt-2 text-[12px] text-neutral-500">Svar for at se, hvad andre har gættet.</p>
+            </>
+          )
+        ) : (
         <ul className="space-y-2" aria-label="Fordeling af brugernes gæt">
           {p.options.slice(0, 4).map((o) => (
             <li key={o.id}>
@@ -99,6 +114,7 @@ export function PredictionCard({ p, reason }: { p: Prediction; reason?: string |
             </li>
           ))}
         </ul>
+        )}
         <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-[12px] text-neutral-500">
           <span className="inline-flex items-center gap-1">
             <Users className="h-3.5 w-3.5" aria-hidden="true" /> {fmtInt(participantsOf(state, p))} har gættet

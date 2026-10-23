@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { PredictProvider, PredictOverlays, PredictTab, usePredictHost, type HostBridge, type HostTab } from './predict'
+import { PERSIST_ACROSS_REFRESH, PredictProvider, PredictOverlays, PredictTab, usePredictHost, type HostBridge, type HostTab } from './predict'
 import { BottomNav, Header, StatusBar } from './shell/Chrome'
 import { Forside } from './shell/pages/Forside'
 import { Seneste } from './shell/pages/Seneste'
@@ -10,6 +10,7 @@ const TAB_KEY = 'drnyheder:tab'
 const TABS: HostTab[] = ['forside', 'seneste', 'video', 'spil', 'menu']
 
 function loadTab(): HostTab {
+  if (!PERSIST_ACROSS_REFRESH) return 'forside'
   try {
     const t = localStorage.getItem(TAB_KEY) as HostTab | null
     if (t && TABS.includes(t)) return t

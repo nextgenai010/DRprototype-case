@@ -6,7 +6,13 @@ import { PREDICTIONS, closesAt, currentWeek, getPrediction, officialResult, reca
 import { DAY, dateKey } from './logic/time'
 import type { DemoUser, GuessValue, League, PredictState, Profile } from './types'
 
-export const STORAGE_KEY = 'drpredict:state:v1'
+export const STORAGE_KEY = 'drpredict:state:v2'
+
+/**
+ * Demo mode: every page refresh starts the demo from scratch (nothing answered,
+ * not logged in). Set to true to keep state across refreshes instead.
+ */
+export const PERSIST_ACROSS_REFRESH = false
 
 export function initialState(): PredictState {
   return {
@@ -30,6 +36,12 @@ export function initialState(): PredictState {
 
 function load(): PredictState {
   try {
+    // v1 stored the demo account with pre-filled answers on open questions; start fresh.
+    localStorage.removeItem('drpredict:state:v1')
+    if (!PERSIST_ACROSS_REFRESH) {
+      localStorage.removeItem(STORAGE_KEY)
+      return initialState()
+    }
     const raw = localStorage.getItem(STORAGE_KEY)
     if (raw) {
       const parsed = JSON.parse(raw) as PredictState
@@ -41,7 +53,7 @@ function load(): PredictState {
   return initialState()
 }
 
-/** Guesses the demo account "Alex" already made before the demo (applied at login). */
+/** Resolved guesses the demo account "Alex" made before the demo (applied at login). Open questions start unanswered. */
 function demoAccountGuesses(now: number): PredictState['guesses'] {
   const at = now - 3 * DAY
   const g: Record<string, GuessValue> = {
@@ -50,9 +62,6 @@ function demoAccountGuesses(now: number): PredictState['guesses'] {
     'september-varme': 'no',
     'bagedyst-sidste': 'yasmin',
     bogforum: 'yes',
-    'superliga-top': { home: 2, away: 1 },
-    finanslov: 'yes',
-    mgp: 'luna',
   }
   return Object.fromEntries(Object.entries(g).map(([k, v]) => [k, { value: v, at }]))
 }
@@ -152,6 +161,7 @@ export function PredictProvider({ host, children }: { host: HostBridge; children
   }, [])
 
   useEffect(() => {
+    if (!PERSIST_ACROSS_REFRESH) return
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
     } catch {
