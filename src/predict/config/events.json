@@ -1,0 +1,422 @@
+[
+  {
+    "id": "hb-landskamp",
+    "category": "sport",
+    "tags": ["sport", "handbold"],
+    "type": "choice",
+    "title": "Vinder Danmark aftenens håndboldlandskamp mod Norge?",
+    "description": "Herrelandsholdet møder Norge i en testkamp forud for VM. Hvad tror du?",
+    "visual": "handball",
+    "closesInHours": 5.2,
+    "options": [
+      { "id": "dk", "label": "Danmark vinder", "community": 62 },
+      { "id": "draw", "label": "Uafgjort", "community": 9 },
+      { "id": "no", "label": "Norge vinder", "community": 29 }
+    ],
+    "result": "@userChoice",
+    "fallbackResult": "dk",
+    "participants": 18432,
+    "resolution": "Afgøres når kampen er slut efter ordinær spilletid.",
+    "source": "Officielt resultat fra Dansk Håndbold Forbund",
+    "daily": 10,
+    "related": [
+      { "platform": "DRTV", "headline": "Se optakten på DRTV", "description": "Studiet varmer op til kampen fra kl. 19.30.", "url": "https://www.dr.dk/drtv" },
+      { "platform": "DR Lyd", "headline": "Håndboldpodcasten: Kan Norge stoppes?", "description": "Eksperterne gennemgår holdene før kampen.", "url": "https://www.dr.dk/lyd" }
+    ]
+  },
+  {
+    "id": "superliga-top",
+    "category": "sport",
+    "tags": ["sport", "fodbold"],
+    "type": "score",
+    "title": "Hvad ender Superliga-topkampen?",
+    "description": "Bliver der scoret over 2,5 mål i weekendens topopgør? Gæt det præcise resultat.",
+    "visual": "football",
+    "closesInHours": 3.1,
+    "teams": { "home": "FC København", "away": "FC Midtjylland" },
+    "communityScore": { "home": 2, "away": 1 },
+    "options": [
+      { "id": "home", "label": "FC København vinder", "community": 44 },
+      { "id": "draw", "label": "Uafgjort", "community": 27 },
+      { "id": "away", "label": "FC Midtjylland vinder", "community": 29 }
+    ],
+    "result": { "home": 3, "away": 2 },
+    "participants": 9310,
+    "resolution": "Afgøres efter ordinær spilletid (90 min + tillægstid).",
+    "source": "Officielt resultat fra Divisionsforeningen",
+    "daily": 6,
+    "related": [
+      { "platform": "DR Nyheder", "headline": "Topkampen kan afgøre efterårets mesterskabskamp", "description": "Overblik over formen før weekendens opgør.", "url": "https://www.dr.dk/nyheder" }
+    ]
+  },
+  {
+    "id": "em-svoemning",
+    "category": "sport",
+    "tags": ["sport", "svoemning"],
+    "type": "choice",
+    "title": "Hvilken nation vinder flest medaljer ved EM i kortbanesvømning?",
+    "description": "EM afvikles i december. Hvem topper medaljetabellen?",
+    "visual": "swim",
+    "closesInHours": 216,
+    "options": [
+      { "id": "it", "label": "Italien", "community": 34 },
+      { "id": "gb", "label": "Storbritannien", "community": 27 },
+      { "id": "hu", "label": "Ungarn", "community": 15 },
+      { "id": "nl", "label": "Holland", "community": 24 }
+    ],
+    "result": "it",
+    "participants": 3204,
+    "resolution": "Afgøres når den sidste finale er svømmet.",
+    "source": "Officiel medaljeoversigt fra European Aquatics",
+    "related": [
+      { "platform": "DRTV", "headline": "Følg EM i svømning på DRTV", "description": "Alle finaler vises direkte.", "url": "https://www.dr.dk/drtv" }
+    ]
+  },
+  {
+    "id": "tour-podie",
+    "category": "sport",
+    "tags": ["sport", "cykling"],
+    "type": "yesno",
+    "title": "Kommer en dansker på podiet ved næste års Tour de France?",
+    "description": "Ruten er netop præsenteret. Får vi en dansker i top 3 i Paris?",
+    "visual": "cycling",
+    "closesInHours": 960,
+    "options": [
+      { "id": "yes", "label": "Ja", "community": 57 },
+      { "id": "no", "label": "Nej", "community": 43 }
+    ],
+    "result": "yes",
+    "participants": 7811,
+    "resolution": "Afgøres efter sidste etape i Paris.",
+    "source": "Officielt samlet klassement fra Tour de France",
+    "daily": 3,
+    "related": [
+      { "platform": "DR Lyd", "headline": "Cykelpodcasten: Her er næste års rute", "description": "Bjerge, enkeltstarter og danske chancer.", "url": "https://www.dr.dk/lyd" }
+    ]
+  },
+  {
+    "id": "broendby-agf",
+    "category": "sport",
+    "tags": ["sport", "fodbold"],
+    "type": "score",
+    "title": "Hvad endte Brøndby – AGF?",
+    "description": "Søndagens Superliga-kamp på Brøndby Stadion.",
+    "visual": "football",
+    "closesInHours": -50,
+    "resolvedHoursAgo": 46,
+    "teams": { "home": "Brøndby IF", "away": "AGF" },
+    "communityScore": { "home": 1, "away": 1 },
+    "options": [
+      { "id": "home", "label": "Brøndby vinder", "community": 41 },
+      { "id": "draw", "label": "Uafgjort", "community": 30 },
+      { "id": "away", "label": "AGF vinder", "community": 29 }
+    ],
+    "result": { "home": 2, "away": 1 },
+    "participants": 8120,
+    "resolution": "Afgøres efter ordinær spilletid.",
+    "source": "Officielt resultat fra Divisionsforeningen",
+    "related": [
+      { "platform": "DR Nyheder", "headline": "Sen scoring sendte Brøndby op i tabellen", "description": "Se målene og reaktionerne efter kampen.", "url": "https://www.dr.dk/nyheder" }
+    ]
+  },
+  {
+    "id": "fodbold-sverige",
+    "category": "sport",
+    "tags": ["sport", "fodbold"],
+    "type": "choice",
+    "title": "Vinder Danmark fodboldlandskampen mod Sverige?",
+    "description": "Venskabskamp i Parken.",
+    "visual": "football",
+    "closesInHours": -75,
+    "resolvedHoursAgo": 72,
+    "options": [
+      { "id": "dk", "label": "Danmark vinder", "community": 58 },
+      { "id": "draw", "label": "Uafgjort", "community": 22 },
+      { "id": "se", "label": "Sverige vinder", "community": 20 }
+    ],
+    "result": "dk",
+    "participants": 21003,
+    "resolution": "Afgøres efter ordinær spilletid.",
+    "source": "Officielt resultat fra DBU",
+    "related": [
+      { "platform": "DRTV", "headline": "Se højdepunkterne fra Parken", "description": "Alle mål og de store chancer.", "url": "https://www.dr.dk/drtv" }
+    ]
+  },
+  {
+    "id": "finanslov",
+    "category": "samfund",
+    "tags": ["politik", "nyheder"],
+    "type": "yesno",
+    "title": "Bliver finansloven for 2027 vedtaget før jul?",
+    "description": "Forhandlingerne er i gang på Christiansborg. Når Folketinget at stemme den igennem inden juleferien?",
+    "visual": "parliament",
+    "closesInHours": 1180,
+    "options": [
+      { "id": "yes", "label": "Ja", "community": 71 },
+      { "id": "no", "label": "Nej", "community": 29 }
+    ],
+    "result": "yes",
+    "participants": 6402,
+    "resolution": "Afgøres ved tredjebehandlingen i Folketinget – senest 23. december.",
+    "source": "Folketingets officielle afstemningsresultater (ft.dk)",
+    "daily": 8,
+    "related": [
+      { "platform": "DR Nyheder", "headline": "Sådan forhandles en finanslov", "description": "Forklaret på to minutter: tidsplanen frem mod jul.", "url": "https://www.dr.dk/nyheder" },
+      { "platform": "DR Lyd", "headline": "Politik med Christiansborg-redaktionen", "description": "Ugens podcast om forhandlingerne.", "url": "https://www.dr.dk/lyd" }
+    ]
+  },
+  {
+    "id": "inflation",
+    "category": "samfund",
+    "tags": ["nyheder", "penge"],
+    "type": "choice",
+    "title": "Hvor høj bliver inflationen i næste måling fra Danmarks Statistik?",
+    "description": "Forbrugerprisindekset for oktober offentliggøres om knap to uger.",
+    "visual": "money",
+    "closesInHours": 310,
+    "options": [
+      { "id": "low", "label": "Under 2,0 %", "community": 31 },
+      { "id": "mid", "label": "2,0–2,4 %", "community": 48 },
+      { "id": "high", "label": "2,5 % eller mere", "community": 21 }
+    ],
+    "result": "mid",
+    "participants": 2905,
+    "resolution": "Afgøres når Danmarks Statistik offentliggør forbrugerprisindekset.",
+    "source": "Danmarks Statistik (dst.dk)",
+    "daily": 5,
+    "related": [
+      { "platform": "DR Nyheder", "headline": "Derfor stiger prisen på din indkøbskurv", "description": "Økonomikorrespondenten forklarer tallene.", "url": "https://www.dr.dk/nyheder" }
+    ]
+  },
+  {
+    "id": "hvid-jul",
+    "category": "samfund",
+    "tags": ["nyheder", "vejr"],
+    "type": "yesno",
+    "title": "Bliver det hvid jul i København ifølge DMI?",
+    "description": "Det kræver, at mindst halvdelen af målestationen er dækket af sne juleaftensdag.",
+    "visual": "snow",
+    "closesInHours": 1460,
+    "options": [
+      { "id": "yes", "label": "Ja, hvid jul", "community": 18 },
+      { "id": "no", "label": "Nej", "community": 82 }
+    ],
+    "result": "no",
+    "participants": 11287,
+    "resolution": "Afgøres juleaftensdag kl. 12 ud fra DMI's officielle definition.",
+    "source": "DMI (dmi.dk)",
+    "daily": 7,
+    "related": [
+      { "platform": "DR Nyheder", "headline": "Så sjældent er en hvid jul", "description": "Se statistikken for de sidste 100 år.", "url": "https://www.dr.dk/nyheder" }
+    ]
+  },
+  {
+    "id": "september-varme",
+    "category": "samfund",
+    "tags": ["nyheder", "vejr", "klima"],
+    "type": "yesno",
+    "title": "Blev september varmere end normalt ifølge DMI?",
+    "description": "DMI's månedsopgørelse for september.",
+    "visual": "sun",
+    "closesInHours": -100,
+    "resolvedHoursAgo": 96,
+    "options": [
+      { "id": "yes", "label": "Ja", "community": 64 },
+      { "id": "no", "label": "Nej", "community": 36 }
+    ],
+    "result": "yes",
+    "participants": 5120,
+    "resolution": "Afgøres ved DMI's månedsopgørelse.",
+    "source": "DMI (dmi.dk)",
+    "related": [
+      { "platform": "DR Nyheder", "headline": "September sluttede lunt", "description": "DMI's opgørelse i tal.", "url": "https://www.dr.dk/nyheder" }
+    ]
+  },
+  {
+    "id": "vindrekord",
+    "category": "samfund",
+    "tags": ["nyheder", "klima"],
+    "type": "yesno",
+    "title": "Sætter vindmøllerne ny produktionsrekord i oktober?",
+    "description": "Energinet opgør hver måned, hvor meget strøm vindmøllerne har leveret.",
+    "visual": "wind",
+    "closesInHours": 190,
+    "options": [
+      { "id": "yes", "label": "Ja", "community": 46 },
+      { "id": "no", "label": "Nej", "community": 54 }
+    ],
+    "result": "yes",
+    "participants": 1984,
+    "resolution": "Afgøres når Energinet offentliggør månedstallene.",
+    "source": "Energinet (energinet.dk)",
+    "daily": 4,
+    "related": [
+      { "platform": "DR Nyheder", "headline": "Så meget strøm kom fra vind i år", "description": "Grafik: udviklingen måned for måned.", "url": "https://www.dr.dk/nyheder" }
+    ]
+  },
+  {
+    "id": "mgp",
+    "category": "tv",
+    "tags": ["underholdning", "musik"],
+    "type": "choice",
+    "title": "Hvem vinder Dansk Melodi Grand Prix 2027?",
+    "description": "Årets otte deltagere er netop offentliggjort. Her er de fire favoritter. (Fiktive navne)",
+    "visual": "stage",
+    "closesInHours": 2400,
+    "options": [
+      { "id": "luna", "label": "Luna Holm", "community": 33 },
+      { "id": "boelgerne", "label": "Bølgerne", "community": 25 },
+      { "id": "kasper", "label": "Kasper Vind", "community": 22 },
+      { "id": "nova", "label": "Nova & Søn", "community": 20 }
+    ],
+    "result": "boelgerne",
+    "participants": 14560,
+    "resolution": "Afgøres når vinderen er kåret ved finalen.",
+    "source": "DR's officielle MGP-resultat",
+    "daily": 6,
+    "related": [
+      { "platform": "DRTV", "headline": "Hør alle årets MGP-sange", "description": "Se deltagerne præsentere sig.", "url": "https://www.dr.dk/drtv" },
+      { "platform": "DR Lyd", "headline": "MGP-podcasten", "description": "Hvem har vinderhittet?", "url": "https://www.dr.dk/lyd" }
+    ]
+  },
+  {
+    "id": "bagedyst",
+    "category": "tv",
+    "tags": ["underholdning"],
+    "type": "choice",
+    "title": "Hvem bliver ugens stjernebager i Den Store Bagedyst?",
+    "description": "Temaet er kringler. Fire bagere er tilbage. (Fiktive deltagere)",
+    "visual": "bake",
+    "closesInHours": 2.1,
+    "options": [
+      { "id": "hanne", "label": "Hanne", "community": 35 },
+      { "id": "mikkel", "label": "Mikkel", "community": 26 },
+      { "id": "yasmin", "label": "Yasmin", "community": 24 },
+      { "id": "peter", "label": "Peter", "community": 15 }
+    ],
+    "result": "mikkel",
+    "participants": 6720,
+    "resolution": "Afgøres når afsnittet er sendt.",
+    "source": "Programmets officielle afgørelse",
+    "daily": 7,
+    "related": [
+      { "platform": "DRTV", "headline": "Se sidste uges afsnit", "description": "Bagerne kæmpede med lagdej.", "url": "https://www.dr.dk/drtv" }
+    ]
+  },
+  {
+    "id": "bagedyst-sidste",
+    "category": "tv",
+    "tags": ["underholdning"],
+    "type": "choice",
+    "title": "Hvem blev stjernebager i sidste uges Bagedyst?",
+    "description": "Temaet var lagkager. (Fiktive deltagere)",
+    "visual": "bake",
+    "closesInHours": -22,
+    "resolvedHoursAgo": 18,
+    "options": [
+      { "id": "hanne", "label": "Hanne", "community": 41 },
+      { "id": "mikkel", "label": "Mikkel", "community": 22 },
+      { "id": "yasmin", "label": "Yasmin", "community": 21 },
+      { "id": "peter", "label": "Peter", "community": 16 }
+    ],
+    "result": "yasmin",
+    "participants": 6510,
+    "resolution": "Afgøres når afsnittet er sendt.",
+    "source": "Programmets officielle afgørelse",
+    "related": [
+      { "platform": "DRTV", "headline": "Se Yasmins vinderkage", "description": "Klip fra afsnittet.", "url": "https://www.dr.dk/drtv" }
+    ]
+  },
+  {
+    "id": "julekalender",
+    "category": "tv",
+    "tags": ["underholdning"],
+    "type": "yesno",
+    "title": "Ser over 1 mio. danskere premieren på årets julekalender?",
+    "description": "Første afsnit sendes 1. december på DR1 og DRTV.",
+    "visual": "tv",
+    "closesInHours": 910,
+    "options": [
+      { "id": "yes", "label": "Ja", "community": 66 },
+      { "id": "no", "label": "Nej", "community": 34 }
+    ],
+    "result": "yes",
+    "participants": 4380,
+    "resolution": "Afgøres ud fra de officielle seertal for premieredagen.",
+    "source": "Kantar Gallup TV-måling",
+    "daily": 4,
+    "related": [
+      { "platform": "DRTV", "headline": "Se traileren til årets julekalender", "description": "De første billeder er her.", "url": "https://www.dr.dk/drtv" }
+    ]
+  },
+  {
+    "id": "aarets-album",
+    "category": "kultur",
+    "tags": ["musik", "kultur"],
+    "type": "choice",
+    "title": "Hvem vinder Årets Album ved musikprisen i november?",
+    "description": "Fem nominerede – hvem løber med prisen? (Fiktive navne)",
+    "visual": "music",
+    "closesInHours": 600,
+    "options": [
+      { "id": "ida", "label": "Ida Strand", "community": 29 },
+      { "id": "nat", "label": "Natbus", "community": 38 },
+      { "id": "aske", "label": "Aske & Ild", "community": 19 },
+      { "id": "maja", "label": "Maja Fjord", "community": 14 }
+    ],
+    "result": "maja",
+    "participants": 3150,
+    "resolution": "Afgøres når prisen uddeles ved showet.",
+    "source": "Prisuddelingens officielle vinderliste",
+    "daily": 5,
+    "related": [
+      { "platform": "DR Lyd", "headline": "Lyt til de nominerede album", "description": "Playliste med årets nominerede.", "url": "https://www.dr.dk/lyd" }
+    ]
+  },
+  {
+    "id": "festival-navn",
+    "category": "kultur",
+    "tags": ["musik", "kultur"],
+    "type": "choice",
+    "title": "Hvilken type navn annonceres først til næste sommers store festival?",
+    "description": "Festivalen offentliggør sit første navn i aften kl. 20.",
+    "visual": "festival",
+    "closesInHours": 7.4,
+    "options": [
+      { "id": "dk", "label": "Et dansk navn", "community": 39 },
+      { "id": "uk", "label": "Et britisk rockband", "community": 24 },
+      { "id": "us", "label": "En amerikansk rapper", "community": 23 },
+      { "id": "kpop", "label": "En K-pop-gruppe", "community": 14 }
+    ],
+    "result": "uk",
+    "participants": 2477,
+    "resolution": "Afgøres når festivalen offentliggør første navn.",
+    "source": "Festivalens officielle annoncering",
+    "daily": 6,
+    "related": [
+      { "platform": "DR Lyd", "headline": "P6 Beat: Hvem kommer til festival?", "description": "Værterne gætter på årets plakat.", "url": "https://www.dr.dk/lyd" }
+    ]
+  },
+  {
+    "id": "bogforum",
+    "category": "kultur",
+    "tags": ["kultur"],
+    "type": "yesno",
+    "title": "Kom Bogforum over 40.000 besøgende i år?",
+    "description": "Bogmessen i Bella Center sluttede i weekenden.",
+    "visual": "books",
+    "closesInHours": -60,
+    "resolvedHoursAgo": 52,
+    "options": [
+      { "id": "yes", "label": "Ja", "community": 55 },
+      { "id": "no", "label": "Nej", "community": 45 }
+    ],
+    "result": "yes",
+    "participants": 1702,
+    "resolution": "Afgøres ud fra arrangørens officielle besøgstal.",
+    "source": "Bogforums officielle pressemeddelelse",
+    "related": [
+      { "platform": "DR Nyheder", "headline": "Rekordmange unge på bogmesse", "description": "Se billederne fra weekenden.", "url": "https://www.dr.dk/nyheder" }
+    ]
+  }
+]

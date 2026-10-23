@@ -1,0 +1,8 @@
+node_modules
+dist
+*.tsbuildinfo
+
+# Reference material (internal, not for the repo)
+DR APP design/
+VM spil inspo/
+.playwright-mcp/
